@@ -2,14 +2,17 @@
 ** Description
 A python project for a basic port scanner. 
 
-
 ** How to run
+*** nix
+    #+begin_src sh
+      nix shell 
+    #+end_src
 *** python run directly
 #+begin_src python
 python3 main.py localhost 22 5000
 #+end_src
 
-*** shell 
+*** shell
 #+begin_src sh
 ./main.py localhost 22 5000
 #+end_src
