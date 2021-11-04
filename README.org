@@ -17,3 +17,13 @@ python3 main.py localhost 22 5000
 ./main.py localhost 22 5000
 #+end_src
 
+*** example output
+    #+begin_example
+    --------------------------------------------------
+    Port: 22 :: open
+    Port: 3000 :: open
+    Port: 5432 :: open
+    --------------------------------------------------
+    Function __main__:: Took 1635999400.0585823 seconds
+    #+end_example
+
