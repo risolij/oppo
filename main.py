@@ -1,7 +1,7 @@
-import sys
 from oppo import Oppo
-import time
 import pyfiglet
+import sys
+import time
 
 
 def timeit(func):
