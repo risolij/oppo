@@ -23,17 +23,20 @@ def banner(func):
 
 
 def usage():
-    print("failure!")
-
+    print("You need at least 3 items passed to the script")
+    print("./main.py <host> <from_port> <to_port>")
+    exit()
 
 
 def is_three_args():
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 4:
         usage()
+
 
 @timeit
 @banner
 def main():
+    is_three_args()
     oppo = Oppo(sys.argv[1], sys.argv[2], sys.argv[3]);
     oppo.scan()
 
