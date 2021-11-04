@@ -3,6 +3,8 @@ let
 in pkgs.mkShell {
   buildInputs = [
     pkgs.python3
+    pkgs.python3.pkgs.pyfiglet
+    pkgs.python3.pkgs.setuptools
   ];
   shellHook = ''
     export PIP_PREFIX=$(pwd)/_build/pip_packages

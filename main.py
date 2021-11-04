@@ -1,6 +1,7 @@
 import sys
 from oppo import Oppo
 import time
+import pyfiglet
 
 
 def timeit(func):
@@ -14,11 +15,21 @@ def timeit(func):
 
 def banner(func):
     def wrapper():
-        print("-" * 50)
+        print(pyfiglet.figlet_format("(Op)en (po)rts"))
+        print("▄" * 60)
         func()
-        print("-" * 50)
+        print("▄" * 60)
     return wrapper
 
+
+def usage():
+    print("failure!")
+
+
+
+def is_three_args():
+    if len(sys.argv) != 3:
+        usage()
 
 @timeit
 @banner
