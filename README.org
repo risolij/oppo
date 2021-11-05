@@ -1,6 +1,6 @@
 * Oppo
 ** Description
-A python project for a basic port scanner. 
+The goal of the project is to practive python while creating something useful. =Oppo= is a port scanner with limited capabilites at the moment.  However, features will slowly be implemented to build the tool up over time with the primary goal of enhancing my own skillset.  If you need a better tool, please use =nmap= or =rustscan=.
 
 ** How to run
 *** nix

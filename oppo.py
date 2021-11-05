@@ -30,6 +30,10 @@ class Oppo:
         return sock
 
 
+    def get_ipaddress(self):
+        return socket.gethostbyname(self.host)
+
+
     def connect(self, sock, port):
         return sock.connect_ex((self.host, port))
 
