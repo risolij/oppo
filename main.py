@@ -2,6 +2,9 @@ from oppo import Oppo
 import pyfiglet
 import sys
 import time
+import colorama
+from colorama import Fore,Back
+
 
 
 def timeit(func):
@@ -15,10 +18,10 @@ def timeit(func):
 
 def banner(func):
     def wrapper():
-        print(pyfiglet.figlet_format("(Op)en (po)rts"))
-        print("▄" * 60)
+        print(Fore.GREEN + pyfiglet.figlet_format("(Op)en (po)rts") + Fore.RESET)
+        print(Fore.CYAN + "⎽" * 60 + Fore.RESET)
         func()
-        print("▄" * 60)
+        print(Fore.CYAN + "⎺" * 60 + Fore.RESET)
     return wrapper
 
 

@@ -1,7 +1,14 @@
 import socket
+import colorama
+from colorama import Fore
+
+
+GREEN = Fore.GREEN
+RESET = Fore.RESET
 
 
 class Oppo:
+
     def __init__(self, host, from_port, to_port):
         self.host = host
         self.from_port = from_port
@@ -10,7 +17,11 @@ class Oppo:
 
     def is_open(self, result, port):
         if result == 0:
-            print(f"Port: {port} :: open")
+            self.printout(port)
+
+
+    def service_name(self, port, protocol):
+        return socket.getservbyport(port, protocol)
 
 
     def scan(self):
@@ -20,3 +31,8 @@ class Oppo:
             result = sock.connect_ex((self.host, port))
             self.is_open(result, port)
             sock.close()
+
+
+    def printout(self, port):
+        print(f" ┠──────  {GREEN} 🔓 {RESET} {port} ⇀ {GREEN} open :: {self.service_name(port, 'tcp')} {RESET}")
+

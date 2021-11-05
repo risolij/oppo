@@ -3,6 +3,7 @@ let
 in pkgs.mkShell {
   buildInputs = [
     pkgs.python3
+    pkgs.python3.pkgs.colorama
     pkgs.python3.pkgs.pyfiglet
     pkgs.python3.pkgs.setuptools
   ];
