@@ -24,13 +24,30 @@ class Oppo:
         return socket.getservbyport(port, protocol)
 
 
+    def create_socket(self):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        socket.setdefaulttimeout(1)
+        return sock
+
+
+    def connect(self, sock, port):
+        return sock.connect_ex((self.host, port))
+
+
+    def close(self, sock):
+        sock.close()
+
+
     def scan(self):
         for port in range(int(self.from_port), int(self.to_port)):
-            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            socket.setdefaulttimeout(1)
-            result = sock.connect_ex((self.host, port))
-            self.is_open(result, port)
-            sock.close()
+            try:
+                sock = self.create_socket()
+                result = self.connect(sock, port)
+                self.is_open(result, port)
+                self.close(sock)
+            except Exception:
+                print(f"Failed to connect")
+                exit(1)
 
 
     def printout(self, port):
