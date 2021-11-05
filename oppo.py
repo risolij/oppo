@@ -51,5 +51,5 @@ class Oppo:
 
 
     def printout(self, port):
-        print(f" ┠──────  {GREEN} 🔓 {RESET} {port} ⇀ {GREEN} open :: {self.service_name(port)} {RESET}")
+        print(f" ┠──────  {GREEN} 🔓 {RESET} {port: <7} ⇀ {GREEN} open :: {self.service_name(port)} {RESET}")
 
