@@ -6,6 +6,9 @@ import colorama
 from colorama import Fore,Back
 
 
+GREEN = Fore.GREEN
+CYAN = Fore.CYAN
+RESET = Fore.RESET
 
 def timeit(func):
     def wrapper():
@@ -18,10 +21,10 @@ def timeit(func):
 
 def banner(func):
     def wrapper():
-        print(Fore.GREEN + pyfiglet.figlet_format("(Op)en (po)rts") + Fore.RESET)
-        print(Fore.CYAN + "⎽" * 60 + Fore.RESET)
+        print(f"{GREEN}{pyfiglet.figlet_format('(Op)en (po)rts')}{RESET}")
+        print(f"{CYAN}{'⎽' * 60}{RESET}")
         func()
-        print(Fore.CYAN + "⎺" * 60 + Fore.RESET)
+        print(f"{CYAN}{'⎺' * 60}{RESET}")
     return wrapper
 
 
