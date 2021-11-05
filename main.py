@@ -12,7 +12,7 @@ def timeit(func):
         time_start = time.time()
         func()
         time_end = time.time()
-        print(f"Function {__name__}:: Took {time_end} seconds")
+        print(f"Function {__name__}:: Took {round(time_end - time_start, 4)} seconds")
     return wrapper
 
 
