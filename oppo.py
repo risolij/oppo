@@ -20,8 +20,8 @@ class Oppo:
             self.printout(port)
 
 
-    def service_name(self, port, protocol):
-        return socket.getservbyport(port, protocol)
+    def service_name(self, port):
+        return socket.getservbyport(port)
 
 
     def create_socket(self):
@@ -51,5 +51,5 @@ class Oppo:
 
 
     def printout(self, port):
-        print(f" ┠──────  {GREEN} 🔓 {RESET} {port} ⇀ {GREEN} open :: {self.service_name(port, 'tcp')} {RESET}")
+        print(f" ┠──────  {GREEN} 🔓 {RESET} {port} ⇀ {GREEN} open :: {self.service_name(port)} {RESET}")
 
