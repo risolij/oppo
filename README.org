@@ -3,10 +3,11 @@
 The goal of the project is to practice python while creating something useful. =Oppo= is a port scanner with limited capabilites at the moment.  However, features will slowly be implemented to build the tool up over time with the primary goal of enhancing my own skillset.  If you need a better tool, please use =nmap= or =rustscan=.
 
 ** How to run
-*** nix
-    #+begin_src sh
-      nix shell 
-    #+end_src
+*** enter development environment
+Follow the [[https://nix.dev/tutorials/install-nix][Nix install guide]] for the package manager and run the following in the root where the =flake.nix= is located
+#+begin_src sh
+nix develop
+#+end_src
 *** python run directly
 #+begin_src python
 python3 main.py localhost 22 7000
@@ -18,19 +19,19 @@ python3 main.py localhost 22 7000
 #+end_src
 
 *** example output
-    #+begin_example
-      _____      __                __          __       _
-     / / _ \ _ __\ \  ___ _ __    / /_ __   ___\ \ _ __| |_ ___
-    | | | | | '_ \| |/ _ \ '_ \  | || '_ \ / _ \| | '__| __/ __|
-    | | |_| | |_) | |  __/ | | | | || |_) | (_) | | |  | |_\__ \
-    | |\___/| .__/| |\___|_| |_| | || .__/ \___/| |_|   \__|___/
-     \_\    |_|  /_/              \_\_|        /_/
-    
-    ⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽
-    ┠──────   🔓  22      ⇀  open :: ssh
-    ┠──────   🔓  3000    ⇀  open :: hbci
-    ┠──────   🔓  5432    ⇀  open :: postgresql
-    ┠──────   🔓  6600    ⇀  open :: mshvlm
-    ⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺
-    Function __main__:: Took 0.5387 seconds
-    #+end_example
+#+begin_example
+  _____      __                __          __       _
+ / / _ \ _ __\ \  ___ _ __    / /_ __   ___\ \ _ __| |_ ___
+| | | | | '_ \| |/ _ \ '_ \  | || '_ \ / _ \| | '__| __/ __|
+| | |_| | |_) | |  __/ | | | | || |_) | (_) | | |  | |_\__ \
+| |\___/| .__/| |\___|_| |_| | || .__/ \___/| |_|   \__|___/
+ \_\    |_|  /_/              \_\_|        /_/
+
+⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽⎽
+┠──────   🔓  22      ⇀  open :: ssh
+┠──────   🔓  3000    ⇀  open :: hbci
+┠──────   🔓  5432    ⇀  open :: postgresql
+┠──────   🔓  6600    ⇀  open :: mshvlm
+⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺
+Function __main__:: Took 0.5387 seconds
+#+end_example
